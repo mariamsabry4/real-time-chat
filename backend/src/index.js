@@ -17,10 +17,11 @@ app.get('/', (req, res) => {
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors (
-{  Origin: "http://localhost:5173/",
-  Credential: true,}
-))
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true,  
+}));
+
 app.use ("/api/auth", authRoutes )
 app.use ("/api/message", messageRoutes )
 

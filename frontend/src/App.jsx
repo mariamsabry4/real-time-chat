@@ -12,7 +12,8 @@ function App() {
   const {authUser, checkAuth} = useAuthStore()
   useEffect(()=>{
 checkAuth()
-  },[]);
+  },[checkAuth]);
+  console.log("authUser in App.jsx", authUser);
 
   return (
     <>
